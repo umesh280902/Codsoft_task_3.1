@@ -7,13 +7,6 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { BlogPost } = require('./database/database');
-
-app.use(cookieParser());
-app.use(express.static('public'));
-app.set('view engine', 'ejs');
-app.listen(portnumber, () => {
-  console.log(`Listening to the API http://localhost:${portnumber}`);
-});
 const corsOptions = {
   origin: 'http://localhost:3000', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -21,8 +14,13 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
-
 app.options('*',cors(corsOptions))
+app.use(cookieParser());
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.listen(portnumber, () => {
+  console.log(`Listening to the API http://localhost:${portnumber}`);
+});
 
 app.get('/api/posts', async (req, res) => {
   try {
