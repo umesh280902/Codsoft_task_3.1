@@ -51,7 +51,7 @@ app.get('/api/posts/:id', async (req, res) => {
       res.cookie('blogViewsToken', token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 }); // Max age of 24 hours
     }
 
-    let blogPost = await BlogPost.findById(postId);
+    let blogPost = await BlogPost.findById(postId).populate('AuthorId').select('-password');
 
     if (!blogPost) {
       return res.status(404).send('Blog post not found');
