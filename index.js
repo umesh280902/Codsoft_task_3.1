@@ -48,7 +48,7 @@ app.get('/api/posts/:id', async (req, res) => {
     if (!token) {
       // If the token is not available, set a new one for the user
       token = uuidv4();
-      res.cookie('blogViewsToken', token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 }); // Max age of 24 hours
+      res.cookie('blogViewsToken', token, { secure:true,httpOnly: true, maxAge: 24 * 60 * 60 * 1000 }); // Max age of 24 hours
     }
 
     let blogPost = await BlogPost.findById(postId).populate('AuthorId').select('-password');

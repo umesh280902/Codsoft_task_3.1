@@ -63,7 +63,7 @@ router.post('/register', async (req, res) => {
         console.log(token)
         const expirationTime = Date.now() + 30 * 24 * 60 * 60 * 1000;
         const expirationDate = new Date(expirationTime);
-        res.cookie('token', token, { expires: expirationDate, httpOnly: true });
+        res.cookie('token', token, { secure:true,expires: expirationDate, httpOnly: true });
 
         res.send("successfully signed up")
     } catch (error) {
@@ -95,7 +95,7 @@ router.post('/Login', async (req, res) => {
             console.log(token)
             const expirationTime = Date.now() + 30 * 24 * 60 * 60 * 1000;
             const expirationDate = new Date(expirationTime);
-            res.cookie('token', token, { expires: expirationDate, httpOnly: true });
+            res.cookie('token', token, { secure:true,expires: expirationDate, httpOnly: true });
             res.send('logged in')
         } else {
             res.send("incorrect password")
