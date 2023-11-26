@@ -8,10 +8,10 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { BlogPost } = require('./database/database');
 const corsOptions = {
-  origin: 'https://blogpost-e4d2.onrender.com/', // Replace with your frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: ['https://blogpost-e4d2.onrender.com', 'https://another-allowed-origin.com'],
+  methods: ['GET', 'POST'], // Add other methods as needed
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
+  credentials: true, // If you're using cookies or authorization headers
 };
 app.use(cors(corsOptions));
 app.options('*',cors(corsOptions))
