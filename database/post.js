@@ -36,7 +36,7 @@ router.get('/Post', authenticate, async (req, res) => {
     // Update image paths
     content = content.map((post) => {
       if (post.Image) {
-        const updatedPath = 'http://localhost:8800';
+        const updatedPath = 'https://blogbackend-m10d.onrender.com';
         const newpath = post.Image.replace('public\\', '/');
         post.Image = updatedPath + newpath;
       }

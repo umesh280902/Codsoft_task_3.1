@@ -27,7 +27,7 @@ app.get('/api/posts', async (req, res) => {
     }
     blogPosts = blogPosts.map((post) => {
       if (post.Image) {
-        const updatedPath = 'http://localhost:8800';
+        const updatedPath = 'https://blogbackend-m10d.onrender.com';
         const newpath = post.Image.replace('public\\', '/');
         post.Image = updatedPath + newpath;
       }
@@ -77,7 +77,7 @@ app.get('/api/posts/:id', async (req, res) => {
     }
 
     if (blogPost.Image) { 
-      const updatedPath = 'http://localhost:8800';
+      const updatedPath = 'https://blogbackend-m10d.onrender.com';
       const newpath = blogPost.Image.replace('public\\', '/');
       blogPost.Image = updatedPath + newpath;
     }
@@ -121,7 +121,7 @@ app.get('/api/most-viewed-posts', async (req, res) => {
     let posts = await BlogPost.find().sort({views:-1}).limit(5).populate('AuthorId').select('-password')
     posts = posts.map((post) => {
       if (post.Image) {
-        const updatedPath = 'http://localhost:8800';
+        const updatedPath = 'https://blogbackend-m10d.onrender.com';
         const newpath = post.Image.replace('public\\', '/');
         post.Image = updatedPath + newpath;
       }
