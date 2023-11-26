@@ -8,7 +8,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { BlogPost } = require('./database/database');
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with your frontend URL
+  origin: 'https://blogpost-e4d2.onrender.com/', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
@@ -21,6 +21,7 @@ app.set('view engine', 'ejs');
 app.listen(portnumber, () => {
   console.log(`Listening to the API http://localhost:${portnumber}`);
 });
+
 
 app.get('/api/posts', async (req, res) => {
   try {
