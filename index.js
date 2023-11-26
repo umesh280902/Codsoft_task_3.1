@@ -14,7 +14,14 @@ app.set('view engine', 'ejs');
 app.listen(portnumber, () => {
   console.log(`Listening to the API http://localhost:${portnumber}`);
 });
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000', // Replace with your frontend's domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Enable credentials (cookies, authorization headers)
+};
+
+app.use(cors(corsOptions));
+
 
 app.get('/api/posts', async (req, res) => {
   try {
