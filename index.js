@@ -22,6 +22,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.options('*',cors(corsOptions))
 
 app.get('/api/posts', async (req, res) => {
   try {
