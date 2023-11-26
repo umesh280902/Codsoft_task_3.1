@@ -1,0 +1,288 @@
+[{
+  "_id": {
+    "$oid": "648a9a5590e6850f8d475291"
+  },
+  "firstname": "umesh",
+  "lastname": "kumawat",
+  "email": "umeshkumawat280@gmail.com",
+  "password": "$2a$10$lVIr1MDgDjUj9z5FKl02KefIu2eMxR465wcHkzRWmrb54mDgss7Pe",
+  "gender": "Male",
+  "content": [
+    {
+      "Title": "React Hooks Tutorial",
+      "Content": "In this tutorial, we will explore React Hooks and how to use them in functional components.",
+      "published": {
+        "$date": "2023-06-15T05:01:19.932Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:01:19.932Z"
+      },
+      "Category": "Programming",
+      "_id": {
+        "$oid": "648a9b1f280880eb7ab39636"
+      }
+    },
+    {
+      "Title": "Exploring Nature Photography",
+      "Content": "Nature photography allows us to capture the beauty of the natural world. In this article, we will discuss various techniques and tips for capturing stunning nature photographs.",
+      "published": {
+        "$date": "2023-06-15T05:01:52.353Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:01:52.353Z"
+      },
+      "Category": "Photography",
+      "_id": {
+        "$oid": "648a9b40280880eb7ab3963e"
+      }
+    }
+  ],
+  "__v": 36
+},
+{
+  "_id": {
+    "$oid": "648a9b62280880eb7ab39645"
+  },
+  "firstname": "sahil",
+  "lastname": "maji",
+  "email": "sahilmaji08@gmail.com",
+  "password": "$2a$10$GFl4bsGz1yazcvjC.IhaWOQEmHjemWnMXYUznnyLDm8aBV0/neb2y",
+  "gender": "Male",
+  "content": [
+    {
+      "Title": "Tech Trends in 2023",
+      "Content": "In the rapidly evolving world of technology, several trends are expected to shape the industry in 2023. From artificial intelligence to blockchain, this article explores the key technological advancements to watch out for this year.\n\nAs we step into 2023, technology continues to advance at an unprecedented pace. Innovations in various fields are transforming industries and revolutionizing the way we live and work. In this article, we will delve into the top technology trends that are set to make a significant impact in the coming months.\n\nArtificial Intelligence (AI):\nAI has been a buzzword for several years, but in 2023, we can expect to see even greater advancements in this field. AI-powered solutions are becoming more sophisticated, enabling machines to perform complex tasks that were once exclusive to human capabilities. From self-driving cars to smart virtual assistants, AI is permeating various aspects of our lives.\nOne area where AI is making significant strides is in healthcare. Medical professionals are leveraging AI algorithms to analyze vast amounts of patient data, aiding in the early detection of diseases and the development of personalized treatment plans. AI is also being used in drug discovery, streamlining the process and reducing costs.\n\nInternet of Things (IoT):\nThe Internet of Things continues to expand its reach, connecting devices and enabling seamless communication between them. In 2023, we can expect to see a proliferation of IoT devices in homes, offices, and cities. These devices, equipped with sensors and actuators, gather data and interact with their environment, creating a network of interconnected devices.\nIoT has the potential to revolutionize various industries. In agriculture, smart sensors can monitor soil conditions, temperature, and humidity, optimizing crop yield and reducing resource wastage. In cities, IoT can enhance infrastructure management, enabling efficient transportation systems, smart energy grids, and improved public services.\n\nBlockchain Technology:\nBlockchain, the technology behind cryptocurrencies like Bitcoin, is gaining traction beyond the financial sector. In 2023, we can expect to see increased adoption of blockchain in areas such as supply chain management, healthcare, and cybersecurity.\nOne of the key advantages of blockchain is its decentralized nature, which ensures transparency and immutability of data. In supply chain management, blockchain can provide a tamper-proof record of transactions, improving traceability and reducing fraud. In healthcare, blockchain can securely store and share patient data, ensuring privacy and interoperability between healthcare providers.\n\nEdge Computing:\nWith the proliferation of IoT devices and the need for real-time data processing, edge computing is emerging as a critical technology trend. Edge computing brings computing resources closer to the data source, reducing latency and enabling faster processing.\nIn industries such as manufacturing and autonomous vehicles, where real-time decision-making is crucial, edge computing enables faster response times by processing data locally. This technology also alleviates the burden on cloud infrastructure, allowing for more efficient and scalable systems.\n\n5G Technology:\nAs 5G networks continue to roll out globally, we can expect to see the transformative impact of this technology in 2023. With significantly faster speeds and lower latency, 5G enables a wide range of applications, including augmented reality, autonomous vehicles, and smart cities.\nThe high bandwidth and low latency of 5G make it ideal for real-time applications that require quick data transfer. For example, augmented reality experiences can be more immersive and seamless with 5G, enabling new possibilities in gaming, education, and remote collaboration.\n\nThese are just a few of the many technology trends that will shape the landscape in 2023. From AI to blockchain, IoT to edge computing, the rapid pace of innovation is driving transformative changes across industries. It's an exciting time to be a part\n\n\n\n\n\n",
+      "published": {
+        "$date": "2023-06-15T05:04:44.453Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:04:44.453Z"
+      },
+      "Category": "Technology",
+      "_id": {
+        "$oid": "648a9bec280880eb7ab39649"
+      }
+    },
+    {
+      "Title": "The Best Video Games of 2023",
+      "Content": "6th Time",
+      "published": {
+        "$date": "2023-06-15T05:05:18.290Z"
+      },
+      "updated": {
+        "$date": "2023-06-19T11:08:09.434Z"
+      },
+      "Category": "Games",
+      "_id": {
+        "$oid": "648a9c0e280880eb7ab3964f"
+      }
+    },
+    {
+      "Title": "Top 10 Must-Watch Movies of 2023",
+      "Content": "The year 2023 promises to be an exciting one for movie enthusiasts, with a wide range of captivating films scheduled for release. From thrilling action blockbusters to heartwarming dramas, this article presents a curated list of the top 10 must-watch movies of the year.",
+      "published": {
+        "$date": "2023-06-15T05:06:08.680Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:06:08.680Z"
+      },
+      "Category": "Movies",
+      "_id": {
+        "$oid": "648a9c40280880eb7ab39657"
+      }
+    },
+    {
+      "Title": "new title",
+      "Content": "new content",
+      "published": {
+        "$date": "2023-06-19T11:08:46.028Z"
+      },
+      "updated": {
+        "$date": "2023-06-19T11:08:46.028Z"
+      },
+      "Category": "new category",
+      "_id": {
+        "$oid": "6490373eac9fe6c8784ee6f5"
+      }
+    }
+  ],
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "648a9c7f280880eb7ab3965e"
+  },
+  "firstname": "aarti",
+  "lastname": "mishra",
+  "email": "aartimishra12@gmail.com",
+  "password": "$2a$10$1INoJ5e4sU7SIuFaK9zWFuHFpO5al4Q68A/5wqDc.usFT82SYubD2",
+  "gender": "Female",
+  "content": [
+    {
+      "Title": "The Latest Technological Innovations",
+      "Content": "Discover the latest technological innovations that are revolutionizing various industries. From AI-powered solutions to advancements in renewable energy, this article explores the cutting-edge technologies shaping the future.",
+      "published": {
+        "$date": "2023-06-15T05:07:59.087Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:07:59.087Z"
+      },
+      "Category": "Technology",
+      "_id": {
+        "$oid": "648a9caf280880eb7ab39662"
+      }
+    },
+    {
+      "Title": "Gaming Tips and Strategies",
+      "Content": "Improve your gaming skills with these expert tips and strategies. Whether you're a casual gamer or a competitive player, this article provides valuable insights and techniques to enhance your gaming experience.",
+      "published": {
+        "$date": "2023-06-15T05:09:07.019Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:09:07.019Z"
+      },
+      "Category": "Games",
+      "_id": {
+        "$oid": "648a9cf3280880eb7ab39668"
+      }
+    },
+    {
+      "Title": "Must-Watch Movies for Movie Lovers",
+      "Content": "Calling all movie enthusiasts! Check out this list of must-watch movies that every film lover should add to their watchlist. From timeless classics to hidden gems, this article covers a diverse range of cinematic masterpieces.",
+      "published": {
+        "$date": "2023-06-15T05:09:51.296Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:09:51.296Z"
+      },
+      "Category": "Movies",
+      "_id": {
+        "$oid": "648a9d1f280880eb7ab39670"
+      }
+    },
+    {
+      "Title": "new title",
+      "Content": "new content",
+      "published": {
+        "$date": "2023-07-16T13:52:42.291Z"
+      },
+      "updated": {
+        "$date": "2023-07-16T13:52:42.291Z"
+      },
+      "Category": "new category",
+      "_id": {
+        "$oid": "64b3f62a6409f7802b2400d5"
+      },
+      "Comments": []
+    }
+  ],
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "648a9ebd280880eb7ab39677"
+  },
+  "firstname": "John",
+  "lastname": "Doe",
+  "email": "johndoe@example.com",
+  "password": "$2a$10$vPeFSreQMHtKi/IDRgqUrO0wJ/S9BgwUCQF1s6.m6Bqqh746wUGzS",
+  "gender": "Male",
+  "content": [
+    {
+      "Title": "Introduction to JavaScript",
+      "Content": "JavaScript is a popular programming language used for web development. In this introductory tutorial, we will cover the basics of JavaScript syntax and usage.",
+      "published": {
+        "$date": "2023-06-15T05:17:22.201Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:17:22.201Z"
+      },
+      "Category": "Programming",
+      "_id": {
+        "$oid": "648a9ee2280880eb7ab3967b"
+      }
+    },
+    {
+      "Title": "Tips for Productivity",
+      "Content": "Improving productivity is essential in today's fast-paced world. In this article, we will share some useful tips and techniques to boost your productivity and achieve more in less time.",
+      "published": {
+        "$date": "2023-06-15T05:18:14.788Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:18:14.788Z"
+      },
+      "Category": "Self-Improvement",
+      "_id": {
+        "$oid": "648a9f16280880eb7ab39681"
+      }
+    }
+  ],
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "648a9f5b280880eb7ab39687"
+  },
+  "firstname": "Jane",
+  "lastname": "Doe",
+  "email": "jahndoe@example.com",
+  "password": "$2a$10$fwCwPu4IQHF3WFqeQEN3eOzdrzzf6UltyJYYSKprvX0GCZ7DrJfM2",
+  "gender": "Female",
+  "content": [
+    {
+      "Title": "Healthy Smoothie Recipes",
+      "Content": "Smoothies are a delicious and nutritious way to start your day. In this article, we will share some easy and healthy smoothie recipes that you can try at home.",
+      "published": {
+        "$date": "2023-06-15T05:20:03.360Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:20:03.360Z"
+      },
+      "Category": "Food & Drink",
+      "_id": {
+        "$oid": "648a9f83280880eb7ab3968b"
+      }
+    },
+    {
+      "Title": "Yoga for Stress Relief",
+      "Content": "Yoga is a fantastic practice for managing stress and promoting relaxation. In this guide, we will explore various yoga poses and techniques that can help you reduce stress in your daily life.",
+      "published": {
+        "$date": "2023-06-15T05:20:40.448Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:20:40.448Z"
+      },
+      "Category": "Wellness",
+      "_id": {
+        "$oid": "648a9fa8280880eb7ab39691"
+      }
+    },
+    {
+      "Title": "Yoga for Stress Relief",
+      "Content": "Are you a travel enthusiast? Here are 10 amazing travel destinations that you should consider adding to your bucket list. From pristine beaches to historical landmarks, these places have something for everyone.",
+      "published": {
+        "$date": "2023-06-15T05:21:09.359Z"
+      },
+      "updated": {
+        "$date": "2023-06-15T05:21:09.359Z"
+      },
+      "Category": "Travel",
+      "_id": {
+        "$oid": "648a9fc5280880eb7ab39699"
+      }
+    }
+  ],
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6494869204657c1b3707717e"
+  },
+  "firstname": "ajay",
+  "lastname": "kumawat",
+  "email": "ajaykumawat@gmail.com",
+  "password": "$2a$10$W3LrQYjhdGqUCyUcjFOHP.MMdG7P8Kh/9W4h7Y5KGEQf4TTM1hdYy",
+  "gender": "Male",
+  "content": [],
+  "__v": 0
+}]

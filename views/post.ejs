@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/Post" enctype="multipart/form-data">
+        <input type="text" name="Title" placeholder="Title">
+        <input type="text" name="Content" placeholder="Content">
+        <input type="text" name="Category" placeholder="Category">
+        <input type="file" name="Image" accept="image/*"> <!-- Add this for file upload -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <% for(let i=0; i<content.length; i++) { %>
+        <div>
+            <h2><%= content[i].Title %></h2>
+            <p><%= content[i].Content %></p>
+            <p>Category: <%= content[i].Category %></p>
+            <p>Published: <%= content[i].published %></p>
+            <p>Updated: <%= content[i].updated %></p>
+            <% if (content[i].Image) { %>
+                <img src="<%= content[i].Image %>" alt="Post Image">
+            <% } %>
+            <button type="button" onclick="deleteThisContent('<%= content[i]._id %>')">Delete</button>
+        </div>
+    <% } %>
+
+    <script>
+        function deleteThisContent(id) {
+            fetch(window.location.href, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // Optionally update your UI or handle the response
+            })
+            .catch(error => {
+                console.log('Error occurred: ' + error.message);
+            });
+        }
+    </script>
+</body>
+</html>
