@@ -4,7 +4,8 @@
   "description": "this project is for a blogpost app made using mern stack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
   },
   "author": "umesh kumawat",
   "license": "ISC",
