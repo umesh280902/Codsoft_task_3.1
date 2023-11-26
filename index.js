@@ -15,11 +15,11 @@ app.listen(portnumber, () => {
   console.log(`Listening to the API http://localhost:${portnumber}`);
 });
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with your frontend's domain
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, // Enable credentials (cookies, authorization headers)
+  origin: 'http://localhost:3000', // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 };
-
 app.use(cors(corsOptions));
 
 app.options('*',cors(corsOptions))
