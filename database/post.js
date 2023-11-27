@@ -16,7 +16,7 @@ router.use(cors())
 
 const Storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './public')
+    cb(null, './images')
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
@@ -36,8 +36,8 @@ router.get('/Post', authenticate, async (req, res) => {
     // Update image paths
     content = content.map((post) => {
       if (post.Image) {
-        const updatedPath = 'https://blogbackend-m10d.onrender.com';
-        const newpath = post.Image.replace('public\\', '/');
+        const updatedPath = 'https://localhost:8800/';
+        const newpath = post.Image.replace('images\\', '/');
         post.Image = updatedPath + newpath;
       }
       return post;

@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+const path=require('path')
 const express = require('express');
 const app = express();
 const portnumber = process.env.PORT || 8800;
@@ -7,35 +8,22 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { BlogPost } = require('./database/database');
-// const corsOptions = {
-//   origin: ['https://blogpost-e4d2.onrender.com', 'https://another-allowed-origin.com'],
-//   methods: ['GET', 'POST'], // Add other methods as needed
-//   allowedHeaders: ['Content-Type', 'Authorization'],
-//   credentials: true, // If you're using cookies or authorization headers
-// };
-// app.use(cors(corsOptions));
-// app.options('*',cors(corsOptions))
-app.use((req, res, next) => {
-  const allowedOrigins = ['https://blogpost-e4d2.onrender.com', 'https://another-allowed-origin.com']; // Add your allowed origins here
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-  );
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  next();
+app.use(cors())
+app.use(cookieParser());
+
+// // Serve static files from the React build directory
+app.use(express.static(path.join(__dirname, 'client/build')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
+// Define a route to serve the React app
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
-app.use(cookieParser());
-app.use(express.static('public'));
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 app.listen(portnumber, () => {
   console.log(`Listening to the API http://localhost:${portnumber}`);
 });
+
 
 
 app.get('/api/posts', async (req, res) => {
@@ -47,14 +35,14 @@ app.get('/api/posts', async (req, res) => {
     } else {
       blogPosts = await BlogPost.find().populate('AuthorId').select('-password');
     }
-    blogPosts = blogPosts.map((post) => {
-      if (post.Image) {
-        const updatedPath = 'https://blogbackend-m10d.onrender.com';
-        const newpath = post.Image.replace('public\\', '/');
-        post.Image = updatedPath + newpath;
-      }
-      return post;
-    });
+    // blogPosts = blogPosts.map((post) => {
+    //   if (post.Image) {
+    //     const updatedPath = 'http://localhost:8800/';
+    //     const newpath = post.Image.replace('images\\', '/');
+    //     post.Image = updatedPath + newpath;
+    //   }
+    //   return post;
+    // });
     res.send(blogPosts);
   } catch (error) {
     console.log(error);
@@ -98,11 +86,11 @@ app.get('/api/posts/:id', async (req, res) => {
       await blogPost.save();
     }
 
-    if (blogPost.Image) { 
-      const updatedPath = 'https://blogbackend-m10d.onrender.com';
-      const newpath = blogPost.Image.replace('public\\', '/');
-      blogPost.Image = updatedPath + newpath;
-    }
+    // if (blogPost.Image) { 
+    //   const updatedPath = 'http://localhost:8800/';
+    //   const newpath = blogPost.Image.replace('images\\', '/');
+    //   blogPost.Image = updatedPath + newpath;
+    // }
 
     res.status(200).send(blogPost);
   } catch (error) {
@@ -141,14 +129,14 @@ app.get('/api/recent-posts', async (req, res) => {
 app.get('/api/most-viewed-posts', async (req, res) => {
   try {
     let posts = await BlogPost.find().sort({views:-1}).limit(5).populate('AuthorId').select('-password')
-    posts = posts.map((post) => {
-      if (post.Image) {
-        const updatedPath = 'https://blogbackend-m10d.onrender.com';
-        const newpath = post.Image.replace('public\\', '/');
-        post.Image = updatedPath + newpath;
-      }
-      return post;
-    });
+    // posts = posts.map((post) => {
+    //   if (post.Image) {
+    //     const updatedPath = 'http://localhost:8800//';
+    //     const newpath = post.Image.replace('images\\', '/');
+    //     post.Image = updatedPath + newpath;
+    //   }
+    //   return post;
+    // });
     console.log(posts)
     res.send(posts);
   } catch (error) {

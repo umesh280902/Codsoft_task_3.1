@@ -1,0 +1,74 @@
+/* Grid styles */
+.other-posts {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  /* For larger screens (PC) */
+  @media (min-width: 768px) {
+    .other-posts {
+      grid-template-columns: repeat(2, 1fr); /* Two posts in a row */
+    }
+  }
+  
+  /* For smaller screens (Mobile) */
+  @media (max-width: 768px) {
+    .other-posts {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  }
+  
+  /* Responsive adjustments */
+  /* Your other responsive adjustments for images, text, etc. can follow here */
+  
+  
+  .most-viewed-posts,
+  .categories {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    /* Adjust grid columns for smaller screens */
+    .most-viewed-posts,
+    .categories {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  
+    /* Example adjustments */
+    .card-img-top {
+      width: 100%; /* Ensure images take full width on smaller screens */
+      height: auto;
+    }
+  
+    /* Adjust font size or other styles for smaller screens */
+    .card-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .categories {
+    background-color: #f2f2f2; /* Background color for the category box */
+    padding: 20px; /* Padding around the categories */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .categories ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .categories li {
+    margin-bottom: 5px; /* Spacing between categories */
+  }
+  
+  .categories a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
+  }
+  
+  .categories a:hover {
+    color: #555; /* Hover color */
+  }

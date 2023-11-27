@@ -1,0 +1,50 @@
+.RemoveLink{
+    color: white;
+    text-decoration: none;
+}
+.SetTitle{
+        color:blue;
+        font-size:20px;
+        text-decoration:none
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap between grid items as needed */
+  }
+  
+  /* linkSetter.css */
+.container {
+    padding: 10px;
+    /* Other styles */
+  
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  
+    .profile-details {
+      /* Styles for profile details */
+      @media (max-width: 768px) {
+        order: 1;
+      }
+    }
+  
+    .content-section {
+      /* Styles for content section */
+      @media (max-width: 768px) {
+        order: 2;
+        display: flex;
+        flex-flow: column;
+      }
+    }
+    .btn{
+        @media (max-width:768px) {
+            order:3;
+        }
+    }
+  
+    /* Other styles for mobile responsiveness */
+  }
+  
