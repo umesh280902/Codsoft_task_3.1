@@ -35,14 +35,13 @@ app.get('/api/posts', async (req, res) => {
     } else {
       blogPosts = await BlogPost.find().populate('AuthorId').select('-password');
     }
-    // blogPosts = blogPosts.map((post) => {
-    //   if (post.Image) {
-    //     const updatedPath = 'http://localhost:8800/';
-    //     const newpath = post.Image.replace('images\\', '/');
-    //     post.Image = updatedPath + newpath;
-    //   }
-    //   return post;
-    // });
+    blogPosts = blogPosts.map((post) => {
+      if (post.Image) {
+        const updatedPath = 'https://blogpost-836g.onrender.com/';
+        post.Image = updatedPath + post.Image.replace('\\','/')
+      }
+      return post;
+    });
     res.send(blogPosts);
   } catch (error) {
     console.log(error);
@@ -86,12 +85,10 @@ app.get('/api/posts/:id', async (req, res) => {
       await blogPost.save();
     }
 
-    // if (blogPost.Image) { 
-    //   const updatedPath = 'http://localhost:8800/';
-    //   const newpath = blogPost.Image.replace('images\\', '/');
-    //   blogPost.Image = updatedPath + newpath;
-    // }
-
+    if (blogPost.Image) {
+      const updatedPath = 'https://blogpost-836g.onrender.com/';
+      blogPost.Image = updatedPath + blogPost.Image.replace('\\','/')
+    }
     res.status(200).send(blogPost);
   } catch (error) {
     console.log(error);
@@ -129,14 +126,13 @@ app.get('/api/recent-posts', async (req, res) => {
 app.get('/api/most-viewed-posts', async (req, res) => {
   try {
     let posts = await BlogPost.find().sort({views:-1}).limit(5).populate('AuthorId').select('-password')
-    // posts = posts.map((post) => {
-    //   if (post.Image) {
-    //     const updatedPath = 'http://localhost:8800//';
-    //     const newpath = post.Image.replace('images\\', '/');
-    //     post.Image = updatedPath + newpath;
-    //   }
-    //   return post;
-    // });
+    posts = posts.map((post) => {
+      if (post.Image) {
+        const updatedPath = 'https://blogpost-836g.onrender.com/';
+        post.Image = updatedPath + post.Image.replace('\\','/')
+      }
+      return post;
+    });
     console.log(posts)
     res.send(posts);
   } catch (error) {
